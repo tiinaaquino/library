@@ -18,6 +18,30 @@ public class Book {
 	}
 	
 	//getters
+	public String getTitle()
+	{
+		return title;
+	}
+	
+	public String getAuthor()
+	{
+		return author;
+	}
+	
+	public int getYear()
+	{
+		return year;
+	}
+	
+	public String getPublisher()
+	{
+		return publisher;
+	}
+	
+	public boolean isCheckedOut()
+	{
+		return isCheckedOut;
+	}
 	
 	//setters
 	
