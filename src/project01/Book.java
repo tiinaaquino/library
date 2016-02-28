@@ -87,21 +87,21 @@ public class Book {
 	
 	//other methods
 	// sets isCheckedOut to true when the book is borrowed
-	/*public void checkoutBook()
+	public void checkoutBook()
 	{
 		if (isCheckedOut == true)
 		{
 			isCheckedOut = false;
 		}
-	}*/
+	}
 	
 	//sets isCheckedOut to false when book is returned
-	/*public void returnBook()
+	public void returnBook()
 	{
-		if (isCheckedOut == true)
+		if (isCheckedOut == false)
 		{
-			isCheckedOut = false;
+			isCheckedOut = true;
 		}
-	}*/
+	}
 
 }
