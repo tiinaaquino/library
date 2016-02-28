@@ -72,22 +72,32 @@ public class Book {
 	
 	
 	//String toString
-	
 	public String toString()
 	{
 		return ("Title: " + title + " Author: " + author + " Year published: " + year + " Publisher: " + publisher + " Available to check out: " + isCheckedOut);
 	}
 	
 	//other methods
-	
+	// sets isCheckedOut to true when the book is borrowed
 	public void checkoutBook()
 	{
-		
+		if (isCheckedOut != false)
+		{
+			isCheckedOut = true;
+		}
+		else
+			isCheckedOut = false;
 	}
 	
+	//sets isCheckedOut to false when book is returned
 	public void returnBook()
 	{
-		
+		if (isCheckedOut != true)
+		{
+			isCheckedOut = false;
+		}
+		else
+			isCheckedOut = true;
 	}
 
 }
