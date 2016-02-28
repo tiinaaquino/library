@@ -45,6 +45,32 @@ public class Book {
 	
 	//setters
 	
+	public void setTitle(String bookTitle)
+	{
+		title = bookTitle;
+	}
+	
+	public void setAuthor(String writer)
+	{
+		author = writer;
+	}
+	
+	public void setYear(int date)
+	{
+		year = date;
+	}
+	
+	public void setPublisher(String publishingCompany)
+	{
+		publisher = publishingCompany;
+	}
+	
+	public void setIsCheckedOut(boolean status)
+	{
+		isCheckedOut = status;
+	}
+	
+	
 	//String toString
 	
 	public String toString()
