@@ -75,7 +75,7 @@ public class Book {
 	
 	public String toString()
 	{
-		
+		return ("Title: " + title + " Author: " + author + " Year published: " + year + " Publisher: " + publisher + " Available to check out: " + isCheckedOut);
 	}
 	
 	//other methods
