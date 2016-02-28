@@ -14,7 +14,15 @@ public class Book {
 		this.author = author;
 		this.year = year;
 		this.publisher = publisher;
-		isCheckedOut =  false;
+		this.isCheckedOut = isCheckedOut;
+	}
+	
+	public Book(String title, String author, int year, String publisher)
+	{
+		this.title = title;
+		this.year = year;
+		this.publisher = publisher;
+		isCheckedOut = false;
 	}
 	
 	//getters
@@ -79,25 +87,21 @@ public class Book {
 	
 	//other methods
 	// sets isCheckedOut to true when the book is borrowed
-	public void checkoutBook()
+	/*public void checkoutBook()
 	{
-		if (isCheckedOut != false)
+		if (isCheckedOut == true)
 		{
-			isCheckedOut = true;
-		}
-		else
 			isCheckedOut = false;
-	}
+		}
+	}*/
 	
 	//sets isCheckedOut to false when book is returned
-	public void returnBook()
+	/*public void returnBook()
 	{
-		if (isCheckedOut != true)
+		if (isCheckedOut == true)
 		{
 			isCheckedOut = false;
 		}
-		else
-			isCheckedOut = true;
-	}
+	}*/
 
 }
