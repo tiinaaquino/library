@@ -80,9 +80,10 @@ public class Book {
 	
 	
 	//String toString
+	//return a string w/ book title, author, year & publisher
 	public String toString()
 	{
-		return ("Title: " + title + " Author: " + author + " Year published: " + year + " Publisher: " + publisher + " Available to check out: " + isCheckedOut);
+		return ("Title: " + title + " Author: " + author + " Year published: " + year + " Publisher: " + publisher);
 	}
 	
 	//other methods
