@@ -1,5 +1,7 @@
 package project01;
 
+import java.util.ArrayList;
+
 public class LibraryCatalog {
 	
 	//variables
@@ -7,9 +9,10 @@ public class LibraryCatalog {
 	
 	//constructor
 	
-	//getters - does this include getBook?
+	//no getters and setters!
 	
-	//setters
+	
+	//method that prints the list of available books(that aren't checked out
 	
 	public void add(Book book)
 	{
