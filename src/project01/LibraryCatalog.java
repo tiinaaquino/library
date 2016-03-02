@@ -57,7 +57,7 @@ public class LibraryCatalog {
 	public boolean checkoutBook(String title)
 	{
 		getBook(title);
-		if (book.checkoutBook() == true)
+		if (book.getIsCheckedOut() == true)
 		{
 			return true;
 		}
@@ -74,7 +74,7 @@ public class LibraryCatalog {
 		{
 			if (title.equals(bookName))
 			{
-				if (book.isCheckedOut() == true)
+				if (book.getIsCheckedOut() == true)
 				{
 					book.returnBook();
 				}
