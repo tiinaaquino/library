@@ -37,7 +37,7 @@ public class Driver {
 		
 		
 		LibraryCatalog book = new LibraryCatalog();
-		book.addBooksFromFile("bookList.java");
+		book.addBooksFromFile("bookList");
 		
 		UserInterface ui = new UserInterface();
 		ui.mainLoop(book);
