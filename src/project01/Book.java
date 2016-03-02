@@ -46,7 +46,7 @@ public class Book {
 		return publisher;
 	}
 	
-	public boolean isCheckedOut()
+	public boolean getIsCheckedOut()
 	{
 		return isCheckedOut;
 	}
