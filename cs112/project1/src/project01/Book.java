@@ -83,13 +83,18 @@ public class Book {
 	//return a string w/ book title, author, year & publisher
 	public String toString()
 	{
-		return ("Title: " + title + " Author: " + author + " Year published: " + year + " Publisher: " + publisher);
+		return (isCheckedOut + "Title: " + title + " Author: " + author + " Year published: " + year + " Publisher: " + publisher);
 	}
 	
 	//other methods
 	// sets isCheckedOut to true when the book is borrowed
 	public void checkoutBook()
 	{
+		if (isCheckedOut == false)
+		{
+			isCheckedOut = true;
+		}
+		
 		if (isCheckedOut == true)
 		{
 			isCheckedOut = false;
@@ -99,6 +104,11 @@ public class Book {
 	//sets isCheckedOut to false when book is returned
 	public void returnBook()
 	{
+		if (isCheckedOut == true)
+		{
+			isCheckedOut = false;
+		}
+		
 		if (isCheckedOut == false)
 		{
 			isCheckedOut = true;
