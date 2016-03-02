@@ -3,11 +3,16 @@ package project01;
 //professor said no getters and setters!
 
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.*;
 
 public class LibraryCatalog {
 	
 	//variables
 	private ArrayList<Book> books;
+	Book book;
+	Scanner fileScan, bookScan;
+	String bookInfo;
 	
 	//constructor
 	public LibraryCatalog()
@@ -20,13 +25,7 @@ public class LibraryCatalog {
 		this.books = books;
 	}
 	
-	
-	//method that prints the list of available books that aren't checked out
-	// check parameter??? is this not one of the methods she provided?
-	public String printAvailableBooks(String filename)
-	{
-		
-	}
+	//other methods
 	
 	public void add(Book book)
 	{
@@ -41,27 +40,52 @@ public class LibraryCatalog {
 			{
 				return bookName;
 			}
-			//else
-				//return bookName;
+			else
+				return null;
 		}
 	}
 	
 	public boolean checkoutBook(String title)
 	{
 		getBook(title);
-		Book book = new Book(title);
+		
 		
 		
 	}
 	
 	public boolean returnBook(String title)
 	{
-		
+		for (Book bookName : books)
+		{
+			if (title.equals(bookName))
+			{
+				if (book.isCheckedOut() == true)
+				{
+					book.returnBook();
+				}
+			}
+			else
+			{
+				return false;
+			}
+		}
 	}
 	
-	public void addBooksFromFile(String filename)
+	public void addBooksFromFile(String filename) throws IOException
 	{
+		fileScan = new Scanner(new File("bookList.java"));
+		while (fileScan.hasNext())
+		{
+			bookInfo = fileScan.nextLine();
+			
+			bookScan = new Scanner(bookInfo);
+			bookScan.useDelimiter("/");
+			
+			while (bookScan.hasNext())
+				System.out.println();
+		}
 		
+		//something.add();
 	}
 
 }
