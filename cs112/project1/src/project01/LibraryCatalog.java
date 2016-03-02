@@ -1,7 +1,5 @@
 package project01;
 
-//professor said no getters and setters!
-
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.*;
@@ -24,6 +22,17 @@ public class LibraryCatalog {
 	{
 		this.books = books;
 	}
+	
+	//professor said no getters and setters!
+	
+	//write a method that prints the list of available books (books that are not checked out).
+	/*room for method here
+	 * public Book printAvailableBooks()
+	 *{ 
+	 * 
+	 *}
+	*/
+	
 	
 	//other methods
 	
@@ -48,6 +57,12 @@ public class LibraryCatalog {
 	public boolean checkoutBook(String title)
 	{
 		getBook(title);
+		if (book.checkoutBook() == true)
+		{
+			return true;
+		}
+		else
+			return false;
 		
 		
 		
@@ -73,7 +88,7 @@ public class LibraryCatalog {
 	
 	public void addBooksFromFile(String filename) throws IOException
 	{
-		fileScan = new Scanner(new File("bookList.java"));
+		fileScan = new Scanner(new File("bookList"));
 		while (fileScan.hasNext())
 		{
 			bookInfo = fileScan.nextLine();
