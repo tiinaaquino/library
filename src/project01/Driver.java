@@ -1,8 +1,11 @@
 package project01;
 
+import java.io.*;
+
 public class Driver {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException
+	{
 		
 		// testing out Book class:
 		/*
@@ -32,12 +35,12 @@ public class Driver {
 		
 		
 		
-		/* final code =
-		LibraryCatalog book = new LibraryCatalog();
-		book.addBooksFromFile("booklist");
 		
-		UserInerface ui = new UserInterface();
-		ui.mainLoop(book);*/
+		LibraryCatalog book = new LibraryCatalog();
+		book.addBooksFromFile("bookList.java");
+		
+		UserInterface ui = new UserInterface();
+		ui.mainLoop(book);
 
 	}
 
