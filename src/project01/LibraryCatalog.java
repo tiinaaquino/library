@@ -44,8 +44,6 @@ public class LibraryCatalog {
 		 System.out.println(available);
 	 }
 	
-	
-	
 	//other methods
 	// adds a book to the ArrayList books
 	public void add(Book book)
