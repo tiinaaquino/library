@@ -95,10 +95,7 @@ public class Book {
 			isCheckedOut = true;
 		}
 		
-		if (isCheckedOut == true)
-		{
-			isCheckedOut = false;
-		}
+	
 	}
 	
 	//sets isCheckedOut to false when book is returned
@@ -109,10 +106,7 @@ public class Book {
 			isCheckedOut = false;
 		}
 		
-		if (isCheckedOut == false)
-		{
-			isCheckedOut = true;
-		}
+	
 	}
 
 }
