@@ -7,8 +7,6 @@ public class UserInterface {
 	String input, input2;
 	LibraryCatalog library;
 	
-	
-	
 	public void mainLoop(LibraryCatalog bc)
 	{
 		//first scanner to take in 1, 2, 3, or 4
@@ -36,7 +34,6 @@ public class UserInterface {
 			{
 				System.out.println("Returning the book? Please enter the title: ");
 				input2 = scanner.nextLine();
-				//search for the book
 				bc.returnBook(input2);
 			}
 			
@@ -47,17 +44,12 @@ public class UserInterface {
 				bc.printAvailableBooks();
 			}
 			
-			//exit & breaks out of loop, terminating the program
+			//exits & breaks out of loop, terminating the program
 			if (input.equals("4"))
 			{
 				break;
 			}
-
 		}
 	}
 	
-	
-	
-	
-
 }
