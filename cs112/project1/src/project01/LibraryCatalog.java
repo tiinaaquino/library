@@ -41,7 +41,12 @@ public class LibraryCatalog {
 				 available.add(bookName);
 			 }
 		 }
-		 System.out.println(available);
+		 int index = 0;
+		 while (index < available.size())
+		 {
+			 System.out.println(available.get(index));
+			 index++;
+		 }
 	 }
 	
 	//other methods
