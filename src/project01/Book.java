@@ -53,7 +53,6 @@ public class Book {
 	}
 	
 	//setters
-	
 	public void setTitle(String bookTitle)
 	{
 		title = bookTitle;
@@ -95,8 +94,6 @@ public class Book {
 		{
 			isCheckedOut = true;
 		}
-		
-	
 	}
 	
 	//sets isCheckedOut to false when book is returned
@@ -106,8 +103,6 @@ public class Book {
 		{
 			isCheckedOut = false;
 		}
-		
-	
 	}
 
 }
