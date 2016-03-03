@@ -83,7 +83,7 @@ public class Book {
 	//return a string w/ book title, author, year & publisher
 	public String toString()
 	{
-		return (isCheckedOut + "Title: " + title + " Author: " + author + " Year published: " + year + " Publisher: " + publisher);
+		return ("Title: " + title + " Author: " + author + " Year published: " + year + " Publisher: " + publisher);
 	}
 	
 	//other methods
