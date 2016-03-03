@@ -30,17 +30,15 @@ public class Driver {
 		book5.returnBook();
 		System.out.println(book5);
 		*/
-
-		//testing out LibraryCatalog class:
 		
+		//creating a new LibraryCatalog object named catalog
+		//call addBooksFromFile method
+		LibraryCatalog catalog = new LibraryCatalog();
+		catalog.addBooksFromFile("bookList");
 		
-		
-		
-		LibraryCatalog book = new LibraryCatalog();
-		book.addBooksFromFile("bookList");
-		
+		//create instance of UserInterface & call mainLoop
 		UserInterface ui = new UserInterface();
-		ui.mainLoop(book);
+		ui.mainLoop(catalog);
 
 	}
 
