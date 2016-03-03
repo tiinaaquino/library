@@ -119,7 +119,7 @@ public class LibraryCatalog {
 				}
 			}
 		}
-		System.out.println("This book has not been checked out.");
+		System.out.println("Can not return. " + title + "has already been returned.");
 		return false;
 	}
 	
