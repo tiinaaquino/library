@@ -68,7 +68,15 @@ public class LibraryCatalog {
 			{
 				return bookName;
 			}
+			
+			/* can't compare String & boolean?
+			if (title.equals(bookName.getTitle() == false)
+			{
+				System.out.println("Sorry, we do not stock " + title);
+			} 
+			*/
 		}
+		//System.out.println("Sorry, we do not stock " + title);
 		return null;
 	}
 	
@@ -87,7 +95,7 @@ public class LibraryCatalog {
 		}
 		else
 			{
-			System.out.println("Sorry, we do not stock " + title);
+			//System.out.println("Sorry, we do not stock " + title);
 			return false;
 			}
 	}
