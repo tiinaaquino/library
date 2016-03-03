@@ -25,18 +25,23 @@ public class LibraryCatalog {
 	
 	//professor said no getters and setters!
 	
-	//write a method that prints the list of available books (books that are not checked out).
+	/*
+	 * prints the list of available books (books that are not checked out)
+	 * goes through ArrayList books
+	 * if book is not checked out, add book to new ArrayList available
+	 * prints available
+	 */
 	 public void printAvailableBooks()
 	 {
-		 ArrayList<Book> avail = new ArrayList<Book>();
+		 ArrayList<Book> available = new ArrayList<Book>();
 		 for (Book bookName: books)
 		 {
 			 if (bookName.getIsCheckedOut() == false)
 			 {
-				 avail.add(bookName);
+				 available.add(bookName);
 			 }
 		 }
-		 System.out.println(avail);
+		 System.out.println(available);
 	 }
 	
 	
