@@ -25,7 +25,6 @@ public class UserInterface {
 				input2 = scanner.nextLine();
 				//search for the book
 				library.checkoutBook(input2);
-				
 			}
 			
 			if (input.equals("2"))
