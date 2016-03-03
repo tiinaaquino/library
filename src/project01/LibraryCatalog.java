@@ -81,7 +81,7 @@ public class LibraryCatalog {
 		Book a = getBook(title);
 		if (a.getIsCheckedOut() == false)
 		{
-			System.out.println("Book checked out.");
+			System.out.println(title + " checked out successfully.");
 			a.checkoutBook();
 			return true;
 		}
