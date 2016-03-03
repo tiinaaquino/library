@@ -35,7 +35,6 @@ public class LibraryCatalog {
 	
 	
 	//other methods
-	
 	public void add(Book book)
 	{
 		books.add(book);
@@ -51,7 +50,6 @@ public class LibraryCatalog {
 			}
 		}
 		return null;
-
 	}
 	
 	public boolean checkoutBook(String title)
@@ -62,7 +60,10 @@ public class LibraryCatalog {
 			return true;
 		}
 		else
+			{
+			System.out.println("Book not found in catalog.");
 			return false;
+			}
 	}
 	
 	public boolean returnBook(String title)
@@ -85,19 +86,27 @@ public class LibraryCatalog {
 	
 	public void addBooksFromFile(String filename) throws IOException
 	{
+		//variables for titles
+		String title, author, publisher;
+		int year;
+		
 		fileScan = new Scanner(new File("bookList"));
 		while (fileScan.hasNext())
 		{
+			Book newBook;
 			bookInfo = fileScan.nextLine();
-			
 			bookScan = new Scanner(bookInfo);
 			bookScan.useDelimiter("/");
-			
 			while (bookScan.hasNext())
-				System.out.println();
+			{
+				title = bookScan.next();
+				author = bookScan.next();
+				year = bookScan.nextInt();
+				publisher = bookScan.next();
+				newBook = new Book(title, author, year, publisher);
+				books.add(newBook);
+			}
 		}
-		
-		//something.add();
 	}
 
 }
