@@ -28,7 +28,6 @@ public class UserInterface {
 			{
 				System.out.println("Checking out the book? Please enter the title: ");
 				input2 = scanner.nextLine();
-				
 				bc.checkoutBook(input2);
 			}
 			
@@ -44,7 +43,8 @@ public class UserInterface {
 			//prints list of available books
 			if (input.equals("3"))
 			{
-				//bc.printAvailableBooks();
+				System.out.println("These books are available: ");
+				bc.printAvailableBooks();
 			}
 			
 			//exit & breaks out of loop, terminating the program
