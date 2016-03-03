@@ -26,12 +26,19 @@ public class LibraryCatalog {
 	//professor said no getters and setters!
 	
 	//write a method that prints the list of available books (books that are not checked out).
-	/*
-	 * public Book printAvailableBooks()
-	 *{ 
-	 * use a for each loop
-	 *}
-	*/
+	 public void printAvailableBooks()
+	 {
+		 ArrayList<Book> avail = new ArrayList<Book>();
+		 for (Book bookName: books)
+		 {
+			 if (bookName.getIsCheckedOut() == false)
+			 {
+				 avail.add(bookName);
+			 }
+		 }
+		 System.out.println(avail);
+	 }
+	
 	
 	
 	//other methods
@@ -48,7 +55,6 @@ public class LibraryCatalog {
 	public Book getBook(String title)
 	{
 		for (Book bookName : books)
-			
 		{
 			if (title.equals(bookName.getTitle()))
 			{
