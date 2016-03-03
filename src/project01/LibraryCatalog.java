@@ -44,7 +44,7 @@ public class LibraryCatalog {
 		 int index = 0;
 		 while (index < available.size())
 		 {
-			 System.out.println(available.get(index));
+			 System.out.println(available.get(index).getTitle());
 			 index++;
 		 }
 	 }
