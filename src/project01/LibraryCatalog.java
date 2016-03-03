@@ -83,6 +83,7 @@ public class LibraryCatalog {
 				}
 			}
 		}
+		System.out.println("This book has not been checked out.");
 		return false;
 	}
 	
