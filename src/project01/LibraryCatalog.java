@@ -87,7 +87,7 @@ public class LibraryCatalog {
 		}
 		else
 			{
-			System.out.println("Book not found in catalog.");
+			System.out.println("Sorry, we do not stock " + title);
 			return false;
 			}
 	}
