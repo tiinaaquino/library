@@ -7,6 +7,8 @@ public class UserInterface {
 	String input, input2;
 	LibraryCatalog library;
 	
+	
+	
 	public void mainLoop(LibraryCatalog bc)
 	{
 		Scanner scan = new Scanner(System.in);
@@ -24,7 +26,7 @@ public class UserInterface {
 				System.out.println("Checking out the book? Please enter the title: ");
 				input2 = scanner.nextLine();
 				//search for the book
-				library.checkoutBook(input2);
+				bc.checkoutBook(input2);
 			}
 			
 			if (input.equals("2"))
@@ -32,12 +34,12 @@ public class UserInterface {
 				System.out.println("Returning the book? Please enter the title: ");
 				input2 = scanner.nextLine();
 				//search for the book
-				library.returnBook(input2);
+				bc.returnBook(input2);
 			}
 			
 			if (input.equals("3"))
 			{
-				library.printAvailableBooks();
+				//library.printAvailableBooks();
 			}
 			
 			if (input.equals("4"))
