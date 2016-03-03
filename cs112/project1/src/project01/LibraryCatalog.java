@@ -43,6 +43,7 @@ public class LibraryCatalog {
 	public Book getBook(String title)
 	{
 		for (Book bookName : books)
+			
 		{
 			if (title.equals(bookName.getTitle()))
 			{
@@ -54,9 +55,11 @@ public class LibraryCatalog {
 	
 	public boolean checkoutBook(String title)
 	{
-		getBook(title);
-		if (book.getIsCheckedOut() == true)
+		Book a = getBook(title);
+		if (a.getIsCheckedOut() == false)
 		{
+			System.out.println("Book checked out.");
+			a.checkoutBook();
 			return true;
 		}
 		else
@@ -70,23 +73,21 @@ public class LibraryCatalog {
 	{
 		for (Book bookName : books)
 		{
-			if (title.equals(bookName))
+			if (title.equals(bookName.getTitle()))
 			{
-				if (book.getIsCheckedOut() == true)
+				if (bookName.getIsCheckedOut() == true)
 				{
-					book.returnBook();
+					System.out.println("Book is returned.");
+					bookName.returnBook();
+					return true;
 				}
 			}
-			else
-			{
-				return false;
-			}
 		}
+		return false;
 	}
 	
 	public void addBooksFromFile(String filename) throws IOException
 	{
-		//variables for titles
 		String title, author, publisher;
 		int year;
 		
