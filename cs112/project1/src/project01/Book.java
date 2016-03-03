@@ -17,6 +17,7 @@ public class Book {
 		this.isCheckedOut = isCheckedOut;
 	}
 	
+	//sets isCheckedOut to false by default
 	public Book(String title, String author, int year, String publisher)
 	{
 		this.title = title;
