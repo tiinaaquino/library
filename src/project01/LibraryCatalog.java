@@ -26,7 +26,7 @@ public class LibraryCatalog {
 	//professor said no getters and setters!
 	
 	//write a method that prints the list of available books (books that are not checked out).
-	/*room for method here
+	/*
 	 * public Book printAvailableBooks()
 	 *{ 
 	 * use a for each loop
@@ -35,11 +35,16 @@ public class LibraryCatalog {
 	
 	
 	//other methods
+	// adds a book to the ArrayList books
 	public void add(Book book)
 	{
 		books.add(book);
 	}
 	
+	/*
+	 * searches for the book in ArrayList books & returns it
+	 * returns null if it doesn't exist
+	 */
 	public Book getBook(String title)
 	{
 		for (Book bookName : books)
@@ -53,6 +58,10 @@ public class LibraryCatalog {
 		return null;
 	}
 	
+	/*
+	 * calls & saves getBook method, checks out the book
+	 * if user can checkout the book return true, else return false
+	 */
 	public boolean checkoutBook(String title)
 	{
 		Book a = getBook(title);
@@ -69,6 +78,11 @@ public class LibraryCatalog {
 			}
 	}
 	
+	/*
+	 * returns the book
+	 * searches for the book in ArrayList books
+	 * if the book has the same title & is checked out, returns true
+	 */
 	public boolean returnBook(String title)
 	{
 		for (Book bookName : books)
@@ -87,6 +101,10 @@ public class LibraryCatalog {
 		return false;
 	}
 	
+	/* 1 scanner to read user's input, 1 scanner to read bookList
+	 * uses delimiter to get & create the variables for book
+	 * format: name/author/year/publisher
+	 */
 	public void addBooksFromFile(String filename) throws IOException
 	{
 		String title, author, publisher;
