@@ -29,7 +29,7 @@ public class LibraryCatalog {
 	/*room for method here
 	 * public Book printAvailableBooks()
 	 *{ 
-	 * 
+	 * use a for each loop
 	 *}
 	*/
 	
@@ -45,13 +45,13 @@ public class LibraryCatalog {
 	{
 		for (Book bookName : books)
 		{
-			if (title.equals(bookName))
+			if (title.equals(bookName.getTitle()))
 			{
 				return bookName;
 			}
-			else
-				return null;
 		}
+		return null;
+
 	}
 	
 	public boolean checkoutBook(String title)
@@ -63,9 +63,6 @@ public class LibraryCatalog {
 		}
 		else
 			return false;
-		
-		
-		
 	}
 	
 	public boolean returnBook(String title)
