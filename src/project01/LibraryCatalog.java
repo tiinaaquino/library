@@ -113,7 +113,7 @@ public class LibraryCatalog {
 			{
 				if (bookName.getIsCheckedOut() == true)
 				{
-					System.out.println("Book is returned.");
+					System.out.println(title + "is successfully returned.");
 					bookName.returnBook();
 					return true;
 				}
