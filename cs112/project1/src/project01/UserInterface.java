@@ -24,7 +24,7 @@ public class UserInterface {
 			//checks out a book
 			if (input.equals("1"))
 			{
-				System.out.println("Checking out the book? Please enter the title: ");
+				System.out.println("Checking out the book? Enter the title: ");
 				input2 = scanner.nextLine();
 				bc.checkoutBook(input2);
 			}
